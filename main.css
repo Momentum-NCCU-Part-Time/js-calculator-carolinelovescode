@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  background-color: bisque;
+  background: url(/leaves.jpg);
+}
 .number,
 .operator,
 #equal,
@@ -21,6 +25,8 @@
   display: grid;
   grid-template-columns: repeat(4, 150px);
   grid-template-rows: minmax(150px, auto) repeat(4, 150px);
+  /*   justify-content: center;
+  align-items: center; */
   width: 100px;
   height: 60px;
   margin: 25px;
