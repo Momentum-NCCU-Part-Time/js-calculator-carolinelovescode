@@ -52,6 +52,9 @@ html {
   display: grid;
   color: rgb(45, 5, 68);
   background-color: lightgrey;
+  inline-size: min-content;
+/*  overflow: visible;
+  overflow-wrap: normal; */
   font-size: 50px;
   grid-column: span 4;
   justify-items: right;
@@ -59,3 +62,4 @@ html {
   width: 600px;
   height: auto;
 }
+/* to get the overflow to wrap around the text, play with overflow and overflow-wrap
