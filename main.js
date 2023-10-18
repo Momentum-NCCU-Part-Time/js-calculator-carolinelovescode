@@ -4,11 +4,11 @@
     const totalPreview = document.getElementById('total');
     const numberButtons = document.getElementsByClassName('number');
     const allOperations = document.querySelectorAll('.operator, #equal');
+   
     const equalSign = document.querySelector('#equal');
     
-    let firstNum = "";
-    let secondNum = "";
-    let result = 0;
+    let numArray = ["1","2","3","4","5","6","7","8","9","0"]
+    
     
 
    for (let button of numberButtons) {
@@ -16,16 +16,13 @@
                     totalPreview.innerText += e.target.innerText})
         };  
 
-// Giving numbers actual value 
-    for (let buttons of numberButtons) {
+// Giving numbers actual value , come back to this, may not need
+    
+for (let buttons of numberButtons) {
       buttons.addEventListener('click', () => {
-        if(buttons.innerText += "") {
-          firstNum += buttons.innerText
+        if(buttons.innerText + "numArray") {
         }
-        if(buttons.innerText += "") {
-          secondNum += buttons.innerText
-        }
-      })
+      }); 
     }
 
 // Getting my clear button to work, also a base
@@ -50,9 +47,12 @@
          for (let operators of allOperations) {
           operators.addEventListener('click', () => {
             if(operators.innerText === "=") {
+              console.log(eval(3+3))
+              
             }
             if(operators.innerText === '+') {
-              eval(firstNum + secondNum)
+              eval()
+              
             }
             if(operators.innerText === "-") {
             }
@@ -61,8 +61,8 @@
             }
             if(operators.innerText === "÷") {
               
-            }console.log(operators)
-          })
+            }
+          }); console.log(operators)
          }
 
 
