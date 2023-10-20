@@ -9,11 +9,12 @@ const allOperations = document.querySelectorAll('.operator');
 
 const equalSign = document.querySelector('#equal');
 
-
+let mathToComp = '';
 
 for (let button of numberButtons) {
   button.addEventListener('click', (e) => {
-    totalPreview.innerText += e.target.innerText
+    totalPreview.innerText += e.target.innerText;
+    mathToComp += numberButtons.innerText
   });
 };
 
@@ -23,6 +24,7 @@ for (let button of numberButtons) {
 equalSign.addEventListener('click', (e) => {
   let result = eval(totalPreview.innerText);
   totalPreview.innerText = result;
+  mathToComp = '';
 
 })
 
@@ -30,7 +32,8 @@ equalSign.addEventListener('click', (e) => {
 
 let allClear = document.getElementById('clear')
 allClear.addEventListener('click', (e) => {
-  totalPreview.innerText = ""
+  totalPreview.innerText = "";
+  mathToComp = '';
 }); console.log(allClear)
 
 
@@ -41,6 +44,8 @@ for (let button of allOperations) {
     totalPreview.innerText += e.target.innerText;
   }); console.log(allOperations)
 }
+
+// slash to divide /\/\/\/\/\\/\/\/\/\/
 
 
 
